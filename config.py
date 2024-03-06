@@ -1,0 +1,11 @@
+BATCH_SIZE = 32
+EPOCHS = 30
+LEARING_RATE = 0.001
+TRAINING_IMAGES = 'train/'
+TRAINING_LABELS = 'labels.json'
+TESTING_LABELS = 'test/'
+WEIGHT_PATH='scoreboard.h5'
+letters = " QWERTYUIOPASDFGHJKLZXCVBNM'-:1234567890+()"
+noise = "~@#$%&=*|!\\"
+MAX_LEN = 30
+SIZE = 1260, 90
