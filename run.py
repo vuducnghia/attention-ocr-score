@@ -21,8 +21,8 @@ if __name__ == '__main__':
     model.fit_generator(train_gen, epochs=3, batch_size=1, validation_data=validation_gen, validate_every_steps=10)
     model.save('model.h5')
 
-    # for image, decoder_input, decoder_output in validation_data():
-    #     txt = voc.one_hot_decode(decoder_output, max_txt_length)
-    #     pred = model.predict([image])[0]
-    #     model.visualise([image])
-    #     print(txt, "prediction: ", pred)
+    for image, decoder_input, decoder_output in validation_data():
+        txt = voc.one_hot_decode(decoder_output, max_txt_length)
+        pred = model.predict([image])[0]
+        model.visualise([image])
+        print(txt, "prediction: ", pred)
